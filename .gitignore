@@ -1,2 +1,8 @@
-.vscode/
+*.swp
+*.swa
+*.DS_Store
+*.pyc
+*.ipynb
+
+.vscode/*
 db.sqlite3
