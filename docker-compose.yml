@@ -1,11 +1,11 @@
-version: '3.5'
+version: '3.7'
 services:
   redis:
     restart: always
-    image: redis:alpine
-    container_name: 'redis'
+    image: "${REDIS_IMAGE}"
+    container_name: "${REDIS_CONTAINER}"
     expose:
-      - "6379"
+      - "${REDIS_PORT}"
   app:
     image: "${APP_IMAGE}"
     command: sh -c "pip install -r requirements.txt && python manage.py runserver 0:8000"
